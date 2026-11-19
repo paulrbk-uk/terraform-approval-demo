@@ -1,5 +1,14 @@
+
 terraform {
   required_version = ">= 1.5.0"
+
+  cloud {
+    organization = "sunxnetz-lab"
+
+    workspaces {
+      name = "terraform-approval-demo"
+    }
+  }
 }
 
 resource "terraform_data" "demo" {
